@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: lightgrey;
+    background: #684844;
 }
 
 .links {
@@ -17,9 +17,9 @@
 }
 
 .activeLink {
-    color: #000;
+    color: #5395ec;
 }
 
 .inactiveLink {
-    color: #666;
+    color: white;
 }
