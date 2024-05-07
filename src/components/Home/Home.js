@@ -1,13 +1,23 @@
 import React, { useState } from "react";
 import styles from "./Home.module.css";
 import { DUCKS } from "../../assets/data";
+import quack from "../../assets/Quack.mp3";
 
-function PrevButton({ index, previous }) {
+function PrevButton({ previous }) {
     return <button onClick={previous}>Previous</button>;
 }
 
-function NextButton({ index, next }) {
+function NextButton({ next }) {
     return <button onClick={next}>Next</button>;
+}
+
+function QuackButton(){
+    function playQuack(){
+        const audio = new Audio(quack)
+        audio.play();
+    }
+
+    return <button onClick={playQuack}>QUACK</button>
 }
 
 function Home() {
@@ -35,6 +45,7 @@ function Home() {
             <img src={DUCKS[index]} alt="Mallard" className={styles.img} />
             <div>
                 <PrevButton index={index} previous={previous} />
+                <QuackButton />
                 <NextButton index={index} next={next} />
             </div>
         </div>
