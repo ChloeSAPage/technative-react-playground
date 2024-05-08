@@ -11,21 +11,28 @@ function NextButton({ next }) {
     return <button onClick={next}>Next</button>;
 }
 
-function QuackButton(){
-    function playQuack(){
-        const audio = new Audio(quack)
+function QuackButton() {
+    function playQuack() {
+        const audio = new Audio(quack);
         audio.play();
     }
 
-    return <button onClick={playQuack}>QUACK</button>
+    return <button onClick={playQuack}>QUACK</button>;
 }
 
 function Home() {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        console.log("Image changed to " + index)
-    }, [index])
+        const interval = setInterval(() => {
+            setIndex((prevIndex) => (prevIndex + 1) % DUCKS.length);
+            console.log("index is " + index);
+        }, 3000);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
 
     function previous() {
         if (index === 0) {
