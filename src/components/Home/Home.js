@@ -26,7 +26,6 @@ function Home() {
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prevIndex) => (prevIndex + 1) % DUCKS.length);
-            console.log("index is " + index);
         }, 3000);
 
         return () => {
@@ -35,19 +34,11 @@ function Home() {
     }, []);
 
     function previous() {
-        if (index === 0) {
-            setIndex(DUCKS.length - 1);
-        } else {
-            setIndex(index - 1);
-        }
+        setIndex((prevIndex) => (prevIndex - 1 + DUCKS.length) % DUCKS.length);
     }
 
     function next() {
-        if (index === DUCKS.length - 1) {
-            setIndex(0);
-        } else {
-            setIndex(index + 1);
-        }
+        setIndex((prevIndex) => (prevIndex + 1) % DUCKS.length);
     }
 
     return (
