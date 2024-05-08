@@ -4,7 +4,7 @@ function Info() {
     return (
         <div className={styles.wrapper}>
             <h2>Mallard Information</h2>
-            <p></p>
+            <p>Effect Hooks or Forms?</p>
         </div>
     );
 }

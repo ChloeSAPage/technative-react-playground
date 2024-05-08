@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Home.module.css";
 import { DUCKS } from "../../assets/data";
 import quack from "../../assets/Quack.mp3";
@@ -22,6 +22,10 @@ function QuackButton(){
 
 function Home() {
     const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        console.log("Image changed to " + index)
+    }, [index])
 
     function previous() {
         if (index === 0) {
