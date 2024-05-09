@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Home.module.css";
-import { DUCKS } from "../../assets/data";
+import { MALLARDS } from "../../assets/data";
 import quack from "../../assets/Quack.mp3";
 
 function PrevButton({ previous }) {
@@ -24,27 +24,30 @@ function Home() {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex((prevIndex) => (prevIndex + 1) % DUCKS.length);
-        }, 3000);
-
+        const interval = startCarousel();
         return () => {
             clearInterval(interval);
         };
     }, []);
 
-    function previous() {
-        setIndex((prevIndex) => (prevIndex - 1 + DUCKS.length) % DUCKS.length);
+    function startCarousel() {
+        setInterval(() => {
+            setIndex((prevIndex) => (prevIndex + 1) % MALLARDS.length);
+        }, 3000);
     }
 
-    function next() {
-        setIndex((prevIndex) => (prevIndex + 1) % DUCKS.length);
+    function previous({ interval }) {
+        setIndex((prevIndex) => (prevIndex - 1 + MALLARDS.length) % MALLARDS.length);
+    }
+
+    function next({ interval }) {
+        setIndex((prevIndex) => (prevIndex + 1) % MALLARDS.length);
     }
 
     return (
         <div className={styles.wrapper}>
             <h2>Home</h2>
-            <img src={DUCKS[index]} alt="Mallard" className={styles.img} />
+            <img src={MALLARDS[index]} alt="Mallard" className={styles.img} />
             <div>
                 <PrevButton index={index} previous={previous} />
                 <QuackButton />
