@@ -18,7 +18,7 @@ function DuckInfo({ DUCK }) {
                 <h3>{DUCK.name}</h3>
                 <img src={DUCK.image} alt={DUCK.name}></img>
             </div>
-            <p>{DUCK.description}</p>
+            <p className={styles.description}>{DUCK.description}</p>
         </div>
     );
 }
