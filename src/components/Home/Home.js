@@ -37,7 +37,9 @@ function Home() {
     }
 
     function previous({ interval }) {
-        setIndex((prevIndex) => (prevIndex - 1 + MALLARDS.length) % MALLARDS.length);
+        setIndex(
+            (prevIndex) => (prevIndex - 1 + MALLARDS.length) % MALLARDS.length
+        );
     }
 
     function next({ interval }) {

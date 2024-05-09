@@ -2,6 +2,8 @@ export const MALLARDS = [
     "images/flyingmallard.jpg",
     "images/mallardquacking.jpg",
     "images/mallardintherain.jpg",
+    "images/close-up-flying-mallard.jpg",
+    "images/female-mallard.jpg",
 ];
 
 export const DUCKS = [
