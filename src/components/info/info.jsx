@@ -1,11 +1,13 @@
 import styles from "./info.module.css";
 import { DUCKS } from "../../assets/data";
+import Form from "./Form/Form.jsx";
 
 function Info() {
     return (
         <div className={styles.wrapper}>
             <h2>Other Ducks</h2>
             <p>Other Ducks are pretty too</p>
+            <Form />
             <DuckSection DUCKS={DUCKS} />
         </div>
     );
