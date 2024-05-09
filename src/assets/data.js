@@ -14,7 +14,9 @@ export const DUCKS = [
     {
         name: "Eider",
         image: "images/eider.jpg",
-        description: `The eider is a large sea duck with a wedge-shaped head, and short, often cocked tail. It is the UK's heaviest duck and its fastest flying. They are gregarious, often staying close to the shore riding the swell, or forming long lines further out beyond breaking waves. The adult male has a black body, white back and flank spot, and a salmon-pink breast that can fade to yellow. It has a black crown on its white head and a green patch at the back of the neck. The wedge-shaped bill is pale grey. During eclipse, it is darker with white patches and a pale brown head and crown. The female is brown with dark bars, and juveniles are similar.`,
+        description: `The eider is a large sea duck with a wedge-shaped head, and short, often cocked tail. It is the UK's heaviest duck and its fastest flying. They are gregarious, often staying close to the shore riding the swell, or forming long lines further out beyond breaking waves.
+        The adult male has a black body, white back and flank spot, and a salmon-pink breast that can fade to yellow. It has a black crown on its white head and a green patch at the back of the neck. The wedge-shaped bill is pale grey. During eclipse, it is darker with white patches and a pale brown head and crown.
+        The female is brown with dark bars, and juveniles are similar.`,
     },
     {
         name: "Pintail",
