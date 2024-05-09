@@ -8,3 +8,9 @@ img {
     height: 20rem;
 }
 
+.duckcontainer{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 1rem 3rem
+}

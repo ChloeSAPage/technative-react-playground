@@ -11,21 +11,20 @@ function Info() {
     );
 }
 
-function DuckInfo( {DUCK} ){
+function DuckInfo({ DUCK }) {
     return (
-        <>
-            <div className="duck-img">
-            <h3>{DUCK.name}</h3>
-            <img src={DUCK.image} alt={DUCK.name}></img>
+        <div className={styles.duckcontainer}>
+            <div className={styles.ducks}>
+                <h3>{DUCK.name}</h3>
+                <img src={DUCK.image} alt={DUCK.name}></img>
             </div>
             <p>{DUCK.description}</p>
-        </>
+        </div>
     );
 }
 
-function DuckSection( { DUCKS } ){
-    return DUCKS.map((duck) => <DuckInfo key={duck.name} DUCK={duck}/>
-    )
+function DuckSection({ DUCKS }) {
+    return DUCKS.map((duck) => <DuckInfo key={duck.name} DUCK={duck} />);
 }
 
 export default Info;
