@@ -2,6 +2,7 @@ import Root from "./components/Root/Root";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Info from "./components/info/info";
+import DuckTracker from "./components/DuckTracker/DuckTracker";
 
 const routes = [
     {
@@ -19,6 +20,10 @@ const routes = [
             {
                 path: "info",
                 element: <Info />,
+            },
+            {
+                path: "tracker",
+                element: <DuckTracker />,
             },
         ],
     },

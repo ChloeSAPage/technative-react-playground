@@ -1,0 +1,22 @@
+.wrapper {
+    background: #d6ccc6;
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    max-width: 80%;
+    max-height: auto;
+}
+
+.duckcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+}
+
+.description {
+    width: 40%;
+    margin-left: 2rem;
+}
