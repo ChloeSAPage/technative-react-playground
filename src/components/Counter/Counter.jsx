@@ -8,7 +8,7 @@ function Counter() {
 
     return (
         <div className={styles.wrapper}>
-            <h2>You have seen {count} mallards</h2>
+            <h2>{count >= 0 ? `You have seen ${count} mallards`: `How did you see less than 1 mallard???`}</h2>
             <button onClick={() => dispatch(decrement())}>-</button>
             <button onClick={() => dispatch(increment())}>+</button>
         </div>
