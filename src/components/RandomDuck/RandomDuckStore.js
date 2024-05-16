@@ -1,9 +1,9 @@
-import { configureStore, applyMiddleware } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import randomDuckReducer from "./RandomDuckSlice";
 
 export const store = configureStore({
     reducer: {
-        randomDuckReducer,
+        randomDuck: randomDuckReducer,
     },
 });
 

@@ -6,6 +6,8 @@ function RandomDuck() {
     const duckImage = useSelector(selectDuckImage);
     const dispatch = useDispatch(); // dispatch thunk
 
+    console.log("Duck Image URL:", duckImage); // Add this console log
+
     return (
         <div className={styles.wrapper}>
             <h2>Get a random duck</h2>
