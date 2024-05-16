@@ -11,7 +11,7 @@ function Counter() {
             <h2>
                 {count >= 0
                     ? `You have seen ${count} mallards`
-                    : `How did you see less than 1 mallard???`}
+                    : `How did you see less than 0 mallards???`}
             </h2>
             <button onClick={() => dispatch(decrement())}>-</button>
             <button onClick={() => dispatch(increment())}>+</button>
