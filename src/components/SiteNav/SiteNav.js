@@ -7,6 +7,7 @@ function SiteNav() {
         { label: "About", url: "/about" },
         { label: "Info", url: "/info" },
         { label: "Tracker", url: "/tracker" },
+        { label: "Random Duck", url: "/randomduck" },
     ];
     return (
         <div className={styles.wrapper}>
