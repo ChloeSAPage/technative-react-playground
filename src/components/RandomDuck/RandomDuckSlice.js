@@ -4,12 +4,19 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchDuckImage = createAsyncThunk(
     "randomDuck/fetchDuckImage",
     async () => {
-        const apiURL = "https://random-d.uk/api/quack";
-        const response = await fetch(apiURL, {
-            headers: { Accept: "application/JSON" },
-        });
-        const data = await response.json();
-        return data;
+        try {
+            //const apiURL = "https://random-d.uk/api/quack";
+            const apiURL = "https://api.wheretheiss.at/v1/satellites/25544";
+            const response = await fetch(apiURL, {
+                headers: { Accept: "application/json" },
+            });
+            console.log(response)
+            const data = await response.json();
+            console.log(data);
+            return data.name;
+        } catch (error) {
+            console.log("error: " + error);
+        }
     }
 );
 
@@ -25,7 +32,7 @@ const config = {
     reducers: {}, // don't need
     extraReducers: (builder) => {
         builder
-            .addCase(fetchDuckImage.pending, (state, action) => {
+            .addCase(fetchDuckImage.pending, (state) => {
                 state.isLoading = true;
                 state.hasError = null;
                 // display default duck
