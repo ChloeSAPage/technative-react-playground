@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./RandomDuck.module.css";
-import { fetchDuckImage, selectDuckImage } from "./RandomDuckSlice";
+import { fetchDuckImage } from "./RandomDuckSlice";
 
 function RandomDuck() {
-    const duckImage = useSelector(selectDuckImage);
+    const duckImage = useSelector((state) => state.randomDuck.imageURL);
     const dispatch = useDispatch();
 
     return (

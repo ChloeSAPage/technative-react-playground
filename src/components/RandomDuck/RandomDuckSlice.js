@@ -52,6 +52,4 @@ const config = {
 
 const randomDuckSlice = createSlice(config);
 
-export const selectDuckImage = (state) => state.randomDuck.imageURL;
-
 export default randomDuckSlice.reducer;
