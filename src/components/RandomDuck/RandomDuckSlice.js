@@ -46,6 +46,7 @@ const config = {
                 // display an error
                 state.isLoading = false;
                 state.hasError = action.error.message;
+                state.imageURL = initialState.imageURL;
             });
     },
 };
