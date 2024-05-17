@@ -3,6 +3,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Info from "./components/info/info";
 import DuckTracker from "./components/DuckTracker/DuckTracker";
+import RandomDuck from "./components/RandomDuck/RandomDuck";
 
 const routes = [
     {
@@ -24,6 +25,10 @@ const routes = [
             {
                 path: "tracker",
                 element: <DuckTracker />,
+            },
+            {
+                path: "randomduck",
+                element: <RandomDuck />,
             },
         ],
     },
