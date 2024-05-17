@@ -6,10 +6,10 @@ const config = {
     initialState: 0,
     reducers: {
         increment: (state) => {
-            return state += 1;
+            return (state += 1);
         },
         decrement: (state) => {
-            return state -= 1;
+            return (state -= 1);
         },
     },
 };
@@ -20,4 +20,3 @@ export const counterSlice = createSlice(config);
 export const { increment, decrement } = counterSlice.actions;
 // Reducers
 export default counterSlice.reducer;
-

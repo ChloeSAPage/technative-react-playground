@@ -12,7 +12,9 @@ function RandomDuck() {
         <div className={styles.wrapper}>
             <h2>Get a random duck</h2>
             <p>{duckImage}</p>
-            <button onClick={() => dispatch(fetchDuckImage())}>Get new duck</button>
+            <button onClick={() => dispatch(fetchDuckImage())}>
+                Get new duck
+            </button>
         </div>
     );
 }
