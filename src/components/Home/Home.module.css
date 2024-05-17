@@ -6,4 +6,9 @@
 
 img {
     height: 30rem;
+    border-radius: 50px;
+}
+
+button {
+    margin: 1rem;
 }
