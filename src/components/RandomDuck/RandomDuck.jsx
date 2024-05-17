@@ -11,7 +11,7 @@ function RandomDuck() {
     return (
         <div className={styles.wrapper}>
             <h2>Get a random duck</h2>
-            <p>{duckImage}</p>
+            <img src={duckImage} />
             <button onClick={() => dispatch(fetchDuckImage())}>
                 Get new duck
             </button>

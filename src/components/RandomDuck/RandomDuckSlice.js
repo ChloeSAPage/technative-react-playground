@@ -5,15 +5,13 @@ export const fetchDuckImage = createAsyncThunk(
     "randomDuck/fetchDuckImage",
     async () => {
         try {
-            //const apiURL = "https://random-d.uk/api/quack";
-            const apiURL = "https://api.wheretheiss.at/v1/satellites/25544";
+            const apiURL =
+                "https://corsproxy.io/?https://random-d.uk/api/quack";
             const response = await fetch(apiURL, {
                 headers: { Accept: "application/json" },
             });
-            console.log(response);
             const data = await response.json();
-            console.log(data);
-            return data.name;
+            return data.url;
         } catch (error) {
             console.log("error: " + error);
         }
